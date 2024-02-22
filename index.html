@@ -57,15 +57,26 @@
             // Retrieve the username and password from the input fields
             var enteredUsername = document.getElementById("email").value;
             var enteredPassword = document.getElementById("password").value;
+	    const emailMatch = logins.find(o => o.pass === enteredUsername);
+	    const passMatch = logins.find(o => o.pass === enteredPassword)
+		
+	    const logins = [
+		    {
+			email: "root@nuva.co"
+			pass: "rootpassword" 
+		}
 
+		{
+			email: "01freetrial@nuva.co"
+			pass: "01free"
+		}
+	    ]
             // Replace these with your actual username and password validation logic
-            var correctUsername = ["root@nuva.co", "01freetrial@nuva.co", "userlogin@nuva.co"];
-            var correctPassword = ["rootpass6321", "freetrialpass01", "userlogin01"];
-
+            
             
 
             // Check if the entered username and password are correct
-            if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+            if (enteredUsername === emailMatch && enteredPassword === passMatch) {
                 // Redirect to the new HTML page with username as a query parameter
                 window.location.href = "https://vmp9j3-8080.csb.app/"
             } else {
