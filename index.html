@@ -52,39 +52,34 @@
       <button type="submit" onClick="checkCredentials()">Log in</button>
     </form>
   </div>
-	<script>
-        function checkCredentials() {
-            // Retrieve the username and password from the input fields
-            var enteredUsername = document.getElementById("email").value;
-            var enteredPassword = document.getElementById("password").value;
-	    const emailMatch = logins.find(o => o.email === enteredUsername);
-	    const passMatch = logins.find(o => o.pass === enteredPassword)
-		
-	    const passwords = [
-    {
-        pass: "rootpass",
-        email: "root@nuva.co"
-    },
-    {
-        pass: "cats",
-        email: "cats"
-    },
-    {
-        pass: "anotherpassword",
-        email: "secretpage"
-    }
-];
-            // Replace these with your actual username and password validation logic
-            
-            
+	<script type="text/javascript">
+    function checkpass() {
+    
+    const emailInput = document.getElementById("email").value;
+    const passInput = document.getElementById("password").value;
 
-            // Check if the entered username and password are correct
-            if (enteredUsername === emailMatch && enteredPassword === passMatch) {
-                // Redirect to the new HTML page with username as a query parameter
-                window.location.href = "https://vmp9j3-8080.csb.app/"
-            } else {
-                alert("Incorrect username or password or no specifacation. Please try again.");
-            }
-        }
-    </script>
+    // Get The Passwords And Process Them.
+    const logins = [
+      {
+        email: "root@nuva.co",
+        pass: "rootpass"
+      },
+
+
+    ];
+
+    // Process Passwords
+    const passMatch = logins.find(o => o.pass === passInput)
+    const emailMatch = logins.find(o => o.email === emailInput)
+
+    // Now The Form Checker
+    if (emailMatch && passMatch) {
+      window.location.href = "https://vmp9j3-8080.csb.app/"
+      alert("Welcome To NUVA, A cool alloy based proxy. Have fun! - Hamza Qazi")
+    }
+    else {
+        alert("Incorrect password or email. Please try again.")
+    }
+    }
+  </script>
 </body>
