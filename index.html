@@ -57,20 +57,23 @@
             // Retrieve the username and password from the input fields
             var enteredUsername = document.getElementById("email").value;
             var enteredPassword = document.getElementById("password").value;
-	    const emailMatch = logins.find(o => o.pass === enteredUsername);
+	    const emailMatch = logins.find(o => o.email === enteredUsername);
 	    const passMatch = logins.find(o => o.pass === enteredPassword)
 		
-	    const logins = [
-		    {
-			email: "root@nuva.co"
-			pass: "rootpassword" 
-		}
-
-		{
-			email: "01freetrial@nuva.co"
-			pass: "01free"
-		}
-	    ]
+	    const passwords = [
+    {
+        pass: "rootpass",
+        email: "root@nuva.co"
+    },
+    {
+        pass: "cats",
+        email: "cats"
+    },
+    {
+        pass: "anotherpassword",
+        email: "secretpage"
+    }
+];
             // Replace these with your actual username and password validation logic
             
             
