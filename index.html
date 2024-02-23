@@ -69,17 +69,17 @@
     ];
 
     // Process Passwords
-    const passMatch = logins.find(o => o.pass === passInput)
-    const emailMatch = logins.find(o => o.email === emailInput)
+    const passMatch = logins.find(o => o.pass === passInput);
+    const emailMatch = logins.find(o => o.email === emailInput);
 
     // Now The Form Checker
     if (emailMatch && passMatch) {
-      window.location.href = "https://vmp9j3-8080.csb.app/"
-      alert("Welcome To NUVA, A cool alloy based proxy. Have fun! - Hamza Qazi")
+      window.location.href = "https://vmp9j3-8080.csb.app/";
+      alert("Welcome To NUVA, A cool alloy based proxy. Have fun! - Hamza Qazi");
     }
     else {
-        alert("Incorrect password or email. Please try again.")
-    }
-    }
+        alert("Incorrect password or email. Please try again.");
+    };
+    };
   </script>
 </body>
